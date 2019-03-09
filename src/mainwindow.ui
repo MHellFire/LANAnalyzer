@@ -1,0 +1,1424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>644</width>
+    <height>322</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>LANAnalyzer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/images/lananalyzer.png</normaloff>:/images/lananalyzer.png</iconset>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextUnderIcon</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab0">
+       <attribute name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/images/o_users.png</normaloff>:/images/o_users.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Users</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="treeWidgetUsers">
+          <property name="rootIsDecorated">
+           <bool>false</bool>
+          </property>
+          <attribute name="headerStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>User's IP</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>User's name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Connected</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Disconnected</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Online time</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Offline time</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab1">
+       <attribute name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/images/16_packet.png</normaloff>:/images/16_packet.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Packets</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0" colspan="3">
+         <widget class="QTreeWidget" name="treeWidgetPackets">
+          <property name="rootIsDecorated">
+           <bool>false</bool>
+          </property>
+          <attribute name="headerStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>User's IP</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>User's name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ARP [in]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ARP [out]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ARP [total]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>RARP [in]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>RARP [out]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>RARP [total]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ICMP [in]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ICMP [out]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ICMP [total]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>IGMP [in]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>IGMP [out]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>IGMP [total]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TCP [in]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TCP [out]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TCP [total]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>UDP [in]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>UDP [out]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>UDP [total]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>OTHER [in]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>OTHER [out]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>OTHER [total]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ALL [in]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ALL [out]</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ALL [total]</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButtonIn">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>In</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_down.png</normaloff>:/images/o_down.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButtonOut">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Out</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_up.png</normaloff>:/images/o_up.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButtonTotal">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Total</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/16_up_down.png</normaloff>:/images/16_up_down.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab2">
+       <attribute name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/images/16_up_down.png</normaloff>:/images/16_up_down.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Transfers</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0" colspan="3">
+         <widget class="QTreeWidget" name="treeWidgetTransfer">
+          <property name="rootIsDecorated">
+           <bool>false</bool>
+          </property>
+          <attribute name="headerStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>User's IP</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>User's name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Uploaded</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Downloaded</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Upload speed</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Download speed</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButtonTopActiveUp">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Top active users [uploaded]</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_bars_up.png</normaloff>:/images/o_bars_up.png</iconset>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButtonTopActiveDown">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Top active users [downloaded]</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_bars_down.png</normaloff>:/images/o_bars_down.png</iconset>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButtonUsersGraph">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Upload/Download speed graph</string>
+          </property>
+          <property name="text">
+           <string>Upload/Download speed graph</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/16_graph.png</normaloff>:/images/16_graph.png</iconset>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab3">
+       <attribute name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/images/o_application.png</normaloff>:/images/o_application.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Applications</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0" colspan="4">
+         <widget class="QSplitter" name="splitterApplications">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QTreeWidget" name="treeWidgetUsersApp">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>256</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="showDropIndicator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="rootIsDecorated">
+            <bool>false</bool>
+           </property>
+           <property name="headerHidden">
+            <bool>true</bool>
+           </property>
+           <attribute name="headerVisible">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string notr="true">User's IP</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>User's name</string>
+            </property>
+           </column>
+          </widget>
+          <widget class="QTreeWidget" name="treeWidgetApp">
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="showDropIndicator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="rootIsDecorated">
+            <bool>false</bool>
+           </property>
+           <attribute name="headerStretchLastSection">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Host's port</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Application</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Uploaded</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Downloaded</string>
+            </property>
+           </column>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButtonAppTopUsersUp">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Top active users on selected port</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_bars_up.png</normaloff>:/images/o_bars_up.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButtonAppTopUsersDown">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Top active users on selected port</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_bars_down.png</normaloff>:/images/o_bars_down.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButtonAppTopUp">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Top active ports</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_bars_up.png</normaloff>:/images/o_bars_up.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButtonAppTopDown">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Top active ports</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_bars_down.png</normaloff>:/images/o_bars_down.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab4">
+       <attribute name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/images/o_host.png</normaloff>:/images/o_host.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Hosts</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButtonOpen">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Open selected host with web browser</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_globe.png</normaloff>:/images/o_globe.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QSplitter" name="splitterHosts">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QTreeWidget" name="treeWidgetUsersHosts">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>256</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="showDropIndicator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="rootIsDecorated">
+            <bool>false</bool>
+           </property>
+           <property name="headerHidden">
+            <bool>true</bool>
+           </property>
+           <attribute name="headerVisible">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string notr="true">User's IP</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>User's name</string>
+            </property>
+           </column>
+          </widget>
+          <widget class="QTreeWidget" name="treeWidgetHosts">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="showDropIndicator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>false</bool>
+           </property>
+           <property name="rootIsDecorated">
+            <bool>false</bool>
+           </property>
+           <attribute name="headerStretchLastSection">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Host's IP</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Host's name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Host's port</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Application</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Uploaded</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Downloaded</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>First visit</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Last visit</string>
+            </property>
+           </column>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButtonTopHostsUp">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Top active hosts [uploaded]</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_bars_up.png</normaloff>:/images/o_bars_up.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButtonTopHostsDown">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Top active hosts [downloaded]</string>
+          </property>
+          <property name="icon">
+           <iconset resource="images.qrc">
+            <normaloff>:/images/o_bars_down.png</normaloff>:/images/o_bars_down.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>644</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionExportData"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuEngine">
+    <property name="title">
+     <string>&amp;Capture</string>
+    </property>
+    <addaction name="actionStartNow"/>
+    <addaction name="actionStart"/>
+    <addaction name="actionStop"/>
+    <addaction name="actionStopCountdown"/>
+    <addaction name="separator"/>
+    <addaction name="actionDevice"/>
+    <addaction name="actionFilter"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionContents"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="actionEventsViewer"/>
+    <addaction name="separator"/>
+    <addaction name="actionPortNumbers"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+    <widget class="QMenu" name="menuToolbars">
+     <property name="title">
+      <string>&amp;Toolbars</string>
+     </property>
+     <widget class="QMenu" name="menuStyle">
+      <property name="title">
+       <string>&amp;Style</string>
+      </property>
+      <addaction name="actionIconOnly"/>
+      <addaction name="actionTextOnly"/>
+      <addaction name="actionTextBesideIcon"/>
+      <addaction name="actionTextUnderIcon"/>
+     </widget>
+     <widget class="QMenu" name="menuSize">
+      <property name="title">
+       <string>Si&amp;ze</string>
+      </property>
+      <addaction name="action16"/>
+      <addaction name="action24"/>
+      <addaction name="action32"/>
+     </widget>
+     <addaction name="actionMovable"/>
+     <addaction name="separator"/>
+     <addaction name="menuStyle"/>
+     <addaction name="separator"/>
+     <addaction name="menuSize"/>
+     <addaction name="separator"/>
+     <addaction name="actionDefault"/>
+    </widget>
+    <addaction name="menuToolbars"/>
+    <addaction name="actionStatusBar"/>
+    <addaction name="separator"/>
+    <addaction name="actionTrayIcon"/>
+    <addaction name="separator"/>
+    <addaction name="actionFullScreen"/>
+    <addaction name="actionAlwaysOnTop"/>
+    <addaction name="actionMinimizeToTray"/>
+    <addaction name="separator"/>
+    <addaction name="actionTransparency"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuNetwork">
+    <property name="title">
+     <string>&amp;Network</string>
+    </property>
+    <addaction name="actionNetworkPacketsStatistics"/>
+    <addaction name="actionNetworkPacketsGraph"/>
+    <addaction name="actionNetworkTransferStatistics"/>
+    <addaction name="actionNetworkTransferGraph"/>
+    <addaction name="separator"/>
+    <addaction name="actionCapturedPackets"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEngine"/>
+   <addaction name="menuNetwork"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBarFile">
+   <property name="windowTitle">
+    <string>&amp;File</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBarCapture">
+   <property name="windowTitle">
+    <string>&amp;Capturing</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBarNetwork">
+   <property name="windowTitle">
+    <string>&amp;Network</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBarTools">
+   <property name="windowTitle">
+    <string>&amp;Tools</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBarOptions">
+   <property name="windowTitle">
+    <string>&amp;Options</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBarHelp">
+   <property name="windowTitle">
+    <string>&amp;Help</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/o_cancel.png</normaloff>:/images/o_cancel.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Close</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+X</string>
+   </property>
+  </action>
+  <action name="actionStartNow">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_start_now.png</normaloff>:/images/16_start_now.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start &amp;now</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionDevice">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_device.png</normaloff>:/images/16_device.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Device...</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+D</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_stop.png</normaloff>:/images/16_stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>S&amp;top</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_about.png</normaloff>:/images/16_about.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F1</string>
+   </property>
+  </action>
+  <action name="actionStatusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Status &amp;bar</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_settings.png</normaloff>:/images/16_settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Settings...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_filter.png</normaloff>:/images/16_filter.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Filter...</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+F</string>
+   </property>
+  </action>
+  <action name="actionAlwaysOnTop">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Always on top</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionMinimizeToTray">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Minimize to tray</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionTrayIcon">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tray &amp;icon</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/o_quit.png</normaloff>:/images/o_quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionTransparency">
+   <property name="text">
+    <string>T&amp;ransparency...</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_start.png</normaloff>:/images/16_start.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Start...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionCapturedPackets">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_packet.png</normaloff>:/images/16_packet.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Captured packets</string>
+   </property>
+   <property name="shortcut">
+    <string>F6</string>
+   </property>
+  </action>
+  <action name="actionStopCountdown">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_stop_countdown.png</normaloff>:/images/16_stop_countdown.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop &amp;countdown</string>
+   </property>
+  </action>
+  <action name="actionContents">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_help.png</normaloff>:/images/16_help.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Contents</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionMovable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Movable</string>
+   </property>
+  </action>
+  <action name="actionIconOnly">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Icon only</string>
+   </property>
+  </action>
+  <action name="actionTextOnly">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Text only</string>
+   </property>
+  </action>
+  <action name="actionTextBesideIcon">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Text &amp;beside icon</string>
+   </property>
+  </action>
+  <action name="actionTextUnderIcon">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Text &amp;under icon</string>
+   </property>
+  </action>
+  <action name="actionEventsViewer">
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_viewer.png</normaloff>:/images/16_viewer.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Events viewer</string>
+   </property>
+   <property name="shortcut">
+    <string>F8</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+  </action>
+  <action name="actionNetworkPacketsStatistics">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/o_bars.png</normaloff>:/images/o_bars.png</iconset>
+   </property>
+   <property name="text">
+    <string>Packets &amp;statistics</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="actionExportData">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_export.png</normaloff>:/images/16_export.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Export data...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionPortNumbers">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_ports.png</normaloff>:/images/16_ports.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Port numbers (applications)</string>
+   </property>
+  </action>
+  <action name="actionNetworkTransferStatistics">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_up_down.png</normaloff>:/images/16_up_down.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Transfer statistics</string>
+   </property>
+   <property name="shortcut">
+    <string>F4</string>
+   </property>
+  </action>
+  <action name="actionNetworkPacketsGraph">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_graph.png</normaloff>:/images/16_graph.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Packets graph</string>
+   </property>
+   <property name="shortcut">
+    <string>F3</string>
+   </property>
+  </action>
+  <action name="actionNetworkTransferGraph">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/16_graph.png</normaloff>:/images/16_graph.png</iconset>
+   </property>
+   <property name="text">
+    <string>Transfer &amp;graph</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionDefault">
+   <property name="text">
+    <string>&amp;Default</string>
+   </property>
+  </action>
+  <action name="action16">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;16x16</string>
+   </property>
+  </action>
+  <action name="action24">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;24x24</string>
+   </property>
+  </action>
+  <action name="action32">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;32x32</string>
+   </property>
+  </action>
+  <action name="actionFullScreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Full Screen</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
